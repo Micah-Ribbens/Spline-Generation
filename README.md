@@ -22,7 +22,7 @@ to overcome friction).
 
 # Let's walkthrough a real word example
 Let's start with a simple path with 3 control points. For the sake on not being verbose, the Gaussian elimination and 
-the full matrix does not have to be completed. But there are 9 that you have to fill (TODO ask Eddie). The functions are 
+the full matrix does not have to be completed. But there are 9 that you have to fill (see below). The functions are 
 parameterized by t. There is an x(t) function and a y(t) function. A regular y(x) function can't be used because a path 
 is not guaranteed to be a function thus the parameterization. Only the matrix for the y(t) function will be shown because 
 the same steps are performed on the x(t) function. Once you solve the matrix with those constraints, the path is defined.
@@ -46,6 +46,21 @@ point to start writing code without further research. So for know I am writing t
 of what to do. Then after enough research, I will start writing the actual code. In past projects, the solution had to be 
 restarted because my original design was not the correct choice. I realized after two months of experimentation, so I am 
 being careful now to avoid future pain.
+
+# The 8 Equations in Spline
+For the purposes of clarity I will follow this syntax for describing all points. I will be using the variable followed by 
+the number. For instance, (t1, x) is the (x, y) values of the first control point for the x(t) function. And same goes for 
+the velocity functions. So v1 is the velocity vector at control point one (t1, v).
+
+[//]: # (TODO add subscripts for everything and update image to make sure it is fully accurate!)
+1. x(t1) = x1
+2. x(t2) = x2
+3. x(t2) = x2
+4. x(t3) = x3
+5. x'(t1) = v1
+6. x'(t2) = v2
+7. x<sub>a</sub>'(t2) = x<sub>b</sub>'(t2)
+8. x<sub>a</sub>''(t2) = x<sub>b</sub>''(t2)
 
 # Closing Thoughts
 As with any complicated project, this documentation is oversimplified because it is high level. The fine details will be 
