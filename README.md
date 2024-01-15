@@ -31,7 +31,7 @@ points. The red vectors are the initial and end velocity vectors. Then the matri
 The matrix uses the control points and the initial and end velocity vectors to define the matrix. Then using Gaussian 
 Elimination as stated earlier the spline polynomial constants can be found.
 
-![Spline Example](documentation/spline_example.png)
+![Spline Example](documentation/spline_example.jpeg)
 
 Now that the path is defined, we have to have the robot follow it. For this part of the project it is very robot specific. 
 This year we are using a tank drivetrain, so rotating the robot is accomplished by running the left and right side at different 
@@ -53,12 +53,12 @@ the number. For instance, (t1, x) is the (x, y) values of the first control poin
 the velocity functions. So v1 is the velocity vector at control point one (t1, v).
 
 [//]: # (TODO add subscripts for everything and update image to make sure it is fully accurate!)
-1. x(t1) = x1
-2. x(t2) = x2
-3. x(t2) = x2
-4. x(t3) = x3
-5. x'(t1) = v1
-6. x'(t2) = v2
+1. x<sub>a</sub>(t1) = x1
+2. x<sub>a</sub>(t2) = x2
+3. x<sub>b</sub>(t2) = x2
+4. x<sub>b</sub>(t3) = x3
+5. x<sub>a</sub>'(t1) = v1
+6. x<sub>b</sub>'(t2) = v2
 7. x<sub>a</sub>'(t2) = x<sub>b</sub>'(t2)
 8. x<sub>a</sub>''(t2) = x<sub>b</sub>''(t2)
 
