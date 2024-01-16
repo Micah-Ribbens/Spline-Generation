@@ -52,7 +52,6 @@ For the purposes of clarity I will follow this syntax for describing all points.
 the number. For instance, (t1, x) is the (x, y) values of the first control point for the x(t) function. And same goes for 
 the velocity functions. So v1 is the velocity vector at control point one (t1, v).
 
-[//]: # (TODO add subscripts for everything and update image to make sure it is fully accurate!)
 1. x<sub>a</sub>(t1) = x1
 2. x<sub>a</sub>(t2) = x2
 3. x<sub>b</sub>(t2) = x2
@@ -65,4 +64,6 @@ the velocity functions. So v1 is the velocity vector at control point one (t1, v
 # Closing Thoughts
 As with any complicated project, this documentation is oversimplified because it is high level. The fine details will be 
 documented in the API documentation. This is still a work in progress, so the documentation will be updated as the 
-project progresses and I learn more through experimentation on the robot.
+project progresses and I learn more through experimentation on the robot. Thanks to Eddie Ormseth for the help with both 
+the conceptual level and the Java code that I could use as a template for Gaussian Elimination. 
+Both of those helped immensely on this project! 
