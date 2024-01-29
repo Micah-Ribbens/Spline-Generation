@@ -1,15 +1,5 @@
 use std::f64;
 
-mod game_qu {
-    pub mod base {
-        pub mod utility_functions {
-            pub fn modified_mod() {
-                // Placeholder for the modified_mod function in the original Python code
-            }
-        }
-    }
-}
-
 /// A struct that represents a vector in 2D space
 pub struct Vector2D {
     pub angle: f64,
