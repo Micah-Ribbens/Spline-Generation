@@ -67,3 +67,27 @@ documented in the API documentation. This is still a work in progress, so the do
 project progresses and I learn more through experimentation on the robot. Thanks to Eddie Ormseth for the help with both 
 the conceptual level and the Java code that I could use as a template for Gaussian Elimination. 
 Both of those helped immensely on this project! 
+
+
+# Pseudocdoe for finding spline equations:
+n = control_points.size()
+
+for i = 1 to n {
+
+S<sub>i</sub>(x<sub>i</sub>) = y<sub>i</sub>
+
+S<sub>i</sub>(x<sub>i+1</sub>) = y<sub>i+1</sub>
+
+}
+
+for i = 1 to n {
+
+S'<sub>i-1</sub>(x<sub>i</sub>) = S'<sub>i</sub>
+
+S''<sub>i-1</sub>(s<sub>i</sub>) = S''<sub>i</sub>(x<sub>i</sub>)
+
+}
+
+S'<sub>0</sub>(x<sub>0</sub>) = start_velocity
+
+S'<sub>n</sub>(x<sub>n</sub>) = end_velocity

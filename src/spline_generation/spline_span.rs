@@ -30,9 +30,6 @@ impl SplineSpan {
         // TODO find the coefficients
 
         // Use Matrix.solve() to find the coefficients
-
-
-
     }
 
 
@@ -66,8 +63,14 @@ impl SplineSpan {
             velocity += coefficient * powf(t_value, power);
         }
 
-        return velocity;
+        // Keeps the velocity between the max and min velocity!
+        let max_velocity = 10.0;
+        let min_velocity = 2.0;
 
+        if (velocity > max_velocity) {velocity = max_velocity;}
+        if (velocity < min_velocity) {velocity = min_velocity;}
+
+        return velocity;
     }
 
     /// Adds another row to the coefficients matrix. The first 4 terms are coefficients1, the next 4 are coefficients2,
